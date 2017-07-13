@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CARBON FOOTPRINT CALCULATOR</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700|Orbitron:900|Quicksand:700|Play:700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      position: relative; 
+  }
+  
+ #section1 {padding-top:50px;height:900px;;color: #fff; background-image:url("images/6.jpg");}
+  #section2 {padding-top:50px;height:900px;;color: #fff; background-color: #1E88E5;}
+  #section3 {padding-top:50px;height:450px;color: #fff; background-color: #673ab7;}
+  li{
+  margin:5% 0% 3% 0%;
+  font-family: 'Orbitron', sans-serif;
+  } 
+  .welcome{
+color:white;
+font-family: 'Play', sans-serif;
+font-size:400%;
+font-weight:bold;
+font-style:italic;
+text-transform:uppercase;
+text-align:center;
+margin:auto;
+position:relative;
+padding:20px 0px;
+top:20%;
+width:30%;
+background-color:rgba(0,0,0,0.3);
+}
+.welcomemsg{
+position:relative;
+top:31%;
+width:57%;
+background-color:rgba(0,0,0,0.5);
+border:2px solid white;
+margin:10% 20%;
+padding:2% 8%;
+color:white;
+font-family: 'Comfortaa', cursive;
+font-size:135%;
+text-transform:uppercase;
+text-align:center;
+margin:auto;
+}
+	.button1:hover {
+    background-color: black;
+    color: white;
+	box-shadow: 0 1% 1.5% 0 rgba(255,255,255,0.24),0 2% 5% 0 rgba(255,255,255,0.19);
+}
+	.button1 {
+    background-color: white;
+    color: black;
+    padding:1% 2%;
+    text-align: center;
+	    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    display: inline-block;
+    font-size: 120%;
+    cursor: pointer;
+font-family: 'Quicksand', sans-serif;
+	position:absolute;
+	bottom:06%;
+	left:45%;
+	border-radius: 8px;
+}
+	.button:hover {
+    background-color: black;
+    color: white;
+	box-shadow: 0 1% 1.5% 0 rgba(255,255,255,0.24),0 2% 5% 0 rgba(255,255,255,0.19);
+}
+	.button {
+    background-color: white;
+    color: black;
+    padding:1% 2%;
+    text-align: center;
+	    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    display: inline-block;
+    font-size: 120%;
+    cursor: pointer;
+font-family: 'Quicksand', sans-serif;
+	position:absolute;
+	top:25%;
+	left:45%;
+	border-radius: 8px;
+}
+input[type=text], select, textarea {
+    width: 80%; 
+    padding: 12px;  
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    box-sizing: border-box; 
+    margin-top: 5%; 
+    margin-bottom: 16px; 
+	margin-left:10%;
+    resize: vertical; 
+	color:black;
+	font-family: 'Quicksand', sans-serif;
+}
+#contents{
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.8);
+    padding: 2px;
+		position:relative;
+	top:19%;
+	left:28%;
+	width:45%;
+	height:32%;
+}
+#login{
+margin:auto;
+	position:relative;
+	top:13%;
+	left:10%;
+font-family: 'Comfortaa', cursive;
+	font-size:290%;
+color:white;
+font-weight:bold;
+width:30%;
+}
+	#didbak{
+	position:relative;
+	left:85%;
+	bottom:25%;
+	width:14%;
+	height:4%;
+	background-color:rgb(255,140,0);
+	}
+	#didbak:hover, #didbak.green {
+		background-color: #00cc00;
+		box-shadow: 3px 3px 0px 0px  #FFFFFF;
+		}
+#did{
+	width:90%;
+	height:5%;
+	position:relative;
+	top:20%;
+	left:15%;
+	color:white;
+font-family: 'Play', sans-serif;
+	font-size:110%;
+	<!--/*font-style:italic;
+	font-weight:250;*/-->
+}
+#know{
+background-color:rgba(0,0,0,0.5);
+width:100%;
+height:100%;
+}
+#know1{
+	background-color:rgb(255,140,0);
+	border:2px solid white; 
+	position:relative;
+	bottom:30%;
+	width:47%;
+	height:45%;
+	margin:auto;
+	left:0%;
+	z-index:1000;
+	<!--/*text-align:center;
+	font-family:Prestige Elite Std;*/-->
+}
+#know2{
+	background-color:rgb(255,140,0);
+	border:2px solid white; 
+	position:relative;
+	bottom:30%;
+	width:47%;
+	height:45%;
+	margin:auto;
+	left:0%;
+	z-index:2000;
+	<!--/*text-align:center;
+	font-family:Prestige Elite Std;
+*/-->}
+#know3
+{
+	background-color:rgb(255,140,0);
+	border:2px solid white; 
+	position:relative;
+	bottom:30%;
+	width:47%;
+	height:45%;
+	margin:auto;
+	left:0%;
+	z-index:3000;
+	<!--/*text-align:center;
+	font-family:Prestige Elite Std;*/-->
+}
+p{
+	margin:10% 5%;
+}
+#txt3{
+	position:relative;
+	top:7%;
+	margin:4%;
+	text-align:center;
+font-family: 'Quicksand', sans-serif;
+	color:black;
+	font-size:115%;
+}
+#txt2{
+	position:relative;
+	top:7%;
+	margin:4%;
+	text-align:center;
+font-family: 'Quicksand', sans-serif;
+	color:black;
+	font-size:115%;
+}
+#txt1{
+	position:relative;
+	top:7%;
+	margin:4%;
+	text-align:center;
+font-family: 'Quicksand', sans-serif;
+	color:black;
+	font-size:115%;
+}
+#txt0{
+	position:relative;
+	top:7%;
+	margin:4%;
+	text-align:center;
+	color:rgb(112,48,60);
+	font-size:120%; 
+font-family: 'Play', sans-serif;
+}
+#oval1{
+	width:10%;
+	height:50%;
+	background: red;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 100px / 50px;
+	display:inline-block;
+	box-shadow: 5px 0px;
+		margin: 2% 10% 8% 10%;
+}
+#oval2{
+	width:10%;
+	height:50%;
+	background: red;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 100px / 50px;
+		display:inline-block;
+		box-shadow: 5px 0px;
+		margin: 2% 10% 8% 10%;
+}
+#oval3{
+	width:10%;
+	height:50%;
+	background: red;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 100px / 50px;
+	display:inline-block;
+	box-shadow: 5px 0px;
+		margin: 2% 10% 8% 10%;
+	}
+	#whitebak
+	{
+	position:relative;
+	bottom:29%;
+	width:47%;
+	margin:auto;
+	left:0%;
+		height:6%;
+	}
+	
+	input[type=submit] {
+	border-radius: 8px;
+font-family: 'Quicksand', sans-serif;
+    background-color: #008CBA;
+    color: white;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 4px;
+	margin:1% 0% 0% 5%;
+    cursor: pointer;
+	text-align: center;
+	    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+<!-- When moving the mouse over the submit button, add a darker green color */-->
+input[type=submit]:hover {
+  background-color: white;
+    color: #008CBA;
+	box-shadow: 0 12px 16px 0 rgba(255,255,255,0.24),0 17px 50px 0 rgba(255,255,255,0.19);
+}
+.dot {  
+margin-bottom:30%;
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+#work{ 
+ font-size:200%;
+     text-align: center;
+	    -webkit-transition-duration: 0.4s;
+		    cursor: pointer;
+}
+#work:hover
+{
+	background-color:rgba(255,255,255,0.5);
+}
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <h1 class="navbar-brand" style="font-family: 'Orbitron', sans-serif; font-size:160%;">Carbon.Footprint.Calculator</h1>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav navbar-right">
+	          <li><a href="#section1">Homepage</a></li>
+          <li><a href="#section2">Login</a></li>
+		  <li><a href="#section3">Calculations</a></li>
+          
+		  
+       </ul>
+      </div>
+  </div>
+</nav>    
+
+<div id="section1" class="container-fluid">
+<h1 class="welcome">WELCOME</h1>
+<p class="welcomemsg">YOUR FIRST STEP TOWARDS AN ECO-FRIENDLY LIFE</p>
+<div id="work" style="border:2px solid white; border-radius:100%; width:4%; height:5%; position:relative; top:41%; left:49%;" >
+<a href="#section2"><span  class="glyphicon glyphicon-menu-down" style="margin:13% 20%; color:white;" ></span></a>
+</div>
+</div>
+<div id="section2" class="container-fluid">
+<h2 id="login">LOGIN</h2>
+<div id="contents">
+<form id="myform">
+
+<input id="nameinput" name="Name" type="text" placeholder="enter your name here" required />
+<br/>
+<br/>
+            <select id="sportive" name="sport" style="color:black;" required>
+			 <option value="" disabled selected>enter your country</option>
+<option value="0.49426" >UK</option>
+ <option value="0.823" >Australia</option>
+ <option value="0.215" >Austria</option>
+ <option value="0.196" >Belgium</option>
+<option value="0.068" > Brazil</option>
+<option value="0.591" > Bulgaria</option>
+<option value="0.167" > Canada</option>
+ <option value="0.601" >Chinese Taipei</option>
+ <option value="0.334" >Croatia</option>
+<option value="0.732" > Cyprus</option>
+<option value="0.591" > Czech Republic</option>
+ <option value="0.315" >Denmark</option>
+ <option value="0.457" >Egypt</option>
+ <option value="1.086" >Estonia</option>
+<option value="0.191" > Finland</option>
+ <option value="0.061" >France</option>
+ <option value="0.477" >Germany</option>
+ <option value="0.752" >Gibraltar</option>
+<option value="0.72" > Greece</option>
+<option value="0.768" > Hong Kong, China</option>
+<option value="0.317" > Hungary</option>
+ <option value="0.00018" >Iceland</option>
+ <option value="0.82" >India</option>
+ <option value="0.755" >Indonesia</option>
+ <option value="0.427" >Ireland</option>
+ <option value="0.727" >Israel</option>
+ <option value="0.402" >Italy</option>
+ <option value="0.497" >Japan</option>
+ <option value="0.133" >Latvia</option>
+ <option value="0.27" >Lithuania</option>
+ <option value="0.387" >Luxembourg</option>
+ <option value="0.688" >Malaysia</option>
+ <option value="0.862" >Malta</option>
+ <option value="0.45" >Mexico</option>
+ <option value="0.404" >Netherlands</option>
+ <option value="0.141" >New Zealand</option>
+ <option value="0.013" >Norway</option>
+ <option value="0.409" >Pakistan</option>
+ <option value="0.764" >People's Rep. of China</option>
+ <option value="0.492" >Philippines</option>
+ <option value="0.78" >Poland</option>
+ <option value="0.303" >Portugal</option>
+ <option value="0.499" >Romania</option>
+ <option value="0.437" >Russian Federation</option>
+ <option value="0.754" >Saudi Arabia</option>
+ <option value="0.5" >Singapore</option>
+ <option value="0.2" >Slovak Republic</option>
+ <option value="0.338" >Slovenia</option>
+ <option value="0.869" >South Africa</option>
+ <option value="0.545" >South Korea</option>
+ <option value="0.291" >Spain</option>
+ <option value="0.017" >Sweden</option>
+ <option value="0.03" >Switzerland</option>
+ <option value="0.522" >Thailand</option>
+ <option value="0.472" >Turkey</option>
+ <option value="0.45" >Ukraine</option>
+ <option value="0.503" >United States</option>
+ <option value="0.596" >Africa (average)</option>
+ <option value="0.352" >EU (average)</option>
+ <option value="0.184" >Latin America (average)</option>
+ <option value="0.674" >Middle East (average)</option>
+ <option value="0.459" >Non-OECD Europe and Eurasia (average)</option>
+            </select>
+			<br/>
+			<input type="submit" id="GOD" />
+			</form>
+			</div>
+<div id="didbak">
+<h3 id="did" onclick="fadeshow()">DID YOU KNOW???</h3>
+</div>
+<div id="know1">
+<h2 id="txt0">DID YOU KNOW-</h2><p id="txt1">The main greenhouse gases(GHG)in the Earth's atmosphere are water vapour, carbon dioxide, methane, nitrous oxide,and ozone.<br/>Though these gases are already present in our atmosphere, the problems begin when we distort and accelerate the natural process 
+by releasing more GHG in the atmosphere than are necessary to maintain the planet to an ideal habitable temperature. 
+</p>
+</div>
+<div id="know2">
+<p id="txt2">                 Contrary to popular
+   belief that only fuel emissions
+ contribute to emissions of GHG, every
+ type of energy consumption, right
+ from our electricity consumption to the 
+ whole lifecycle of products that we use
+  in our daily lives, contribute to 
+   emission of GHG. 
+ Increasing levels of GHG in the
+ atmosphere severely affect our
+ environment by trapping the sun's heat
+ and increasing the temperature. This is
+    a major cause for concern. 
+</p>
+</div>
+<div id="know3">
+<p id="txt3">Reducing emissions of GHG may seem like a daunting task, but if each one of us makes a commitment to take small steps today, we can make a big difference tomorrow. This commitment can ensure a better world for our future generations.
+</p>
+</div>
+<!--<div id="whitebak">
+<div id="oval1" onclick="fadeshow1()"></div>
+<div id="oval2" onclick="fadeshow2()"></div>
+<div id="oval3" onclick="fadeshow3()"></div>
+</div>-->
+<div style="text-align:center" id="whitebak">
+  <span class="dot" onclick="fadeshow1()"></span> 
+  <span class="dot" onclick="fadeshow2()"></span> 
+  <span class="dot" onclick="fadeshow3()"></span> 
+</div>
+<div id="work" style="border:2px solid white; border-radius:100%; width:4%; height:5%; position:relative; top:21%; left:49%;" >
+<a href="#section3"><span  class="glyphicon glyphicon-menu-down" style="margin:13% 20%; color:white;" ></span></a>
+</div>
+</div>
+<div id="section3" class="container-fluid">
+<h1 style="text-align:center;  font-family: 'Quicksand', sans-serif; margin-top:7%; margin-bottom:7%; font-size:350%;">Have you finished login? okayy...
+now lets proceed to the calculator!!!</h1>
+<a href="boot4.html"><button class="button1">PROCEED</button></a>
+</div>
+<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+<script src="main1new.js"></script>
+</body>
+</html>

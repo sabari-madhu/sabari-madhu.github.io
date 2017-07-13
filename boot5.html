@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CARBON FOOTPRINT CALCULATOR</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron:900|Quicksand:700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	      <script type="text/javascript"> 
+google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+google.charts.setOnLoadCallback(drawChart1);
+function drawChart1() {
+ var data = google.visualization.arrayToDataTable([
+        ["component", "Value", { role: "style" } ],
+        ["Home Energy", home11, "#9c27b0"],
+        ["Travel", trav11, "red"],
+        ["waste",wastecal11, "#259b24"],
+        ["Total Footprint", total11, "color: #ff9800"],
+		        ["Average World Footprint", avg, "blue"]
+      ]);
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+      var options = {
+        title: "Total Carbon Footprint, in kg co2/yr",
+		          'backgroundColor':'white',
+				  		  'fontName':'Quicksand',
+				  'titleTextStyle':{ color: 'black',
+  fontName: 'Quicksand',
+  fontSize: 17,
+  bold: true },
+  //hAxis.textStyle:{color: 'white',fontName: 'cornerstone',fontSize: 17,bold: true,italic: false},
+  'annotations.alwaysOutside':true,
+        bar: {groupWidth: "35%"},
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart"));
+      chart.draw(view, options);
+}
+	        function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Activity', 'Contribution to total footprint'],
+          ['Home Energy',     home11],
+          ['Travel',      trav11],
+          ['Waste',  wastecal11],
+        ]);
+        var options = {
+          'title': 'Contribution to total footprint',
+          'backgroundColor':'black',
+		  'legend':{position: 'top', textStyle: {color: 'white', fontSize: 16}},
+		  'is3D':true,
+		  'fontName':'Quicksand',
+		  'colors':['#1E88E5','#ff9800','RED'],
+		  'titleTextStyle':{ color: 'white',
+  fontName: 'Quicksand',
+  fontSize: 20,
+  bold: true }
+        };
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+		          </script>
+  <style>
+  body {
+      position: relative; 
+  }
+  
+  #section1 {padding-top:6%;height:1000px;;color: #fff; background-color: red;}
+  #section2 {padding-top:50px;height:1000px;;color: #fff; background-color: #1E88E5;}
+  #section3 {padding-top:50px;height:1000px;color: #fff; background-color: #673ab7;}
+  #section4 {padding-top:50px;height:1000px;color: #fff; background-color: #ff9800;}
+  #section5 {padding-top:50px;height:1000px;color: #fff; background-color: #00bcd4;}
+  #section6 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
+    li{
+  margin:5% 0% 3% 0%;
+  font-family: 'Orbitron', sans-serif;
+  } 
+  	.button1:hover {
+    background-color: white;
+    color: #1E88E5;
+	box-shadow: 0 1% 1.5% 0 rgba(255,255,255,0.24),0 2% 5% 0 rgba(255,255,255,0.19);
+}
+	.button1 {
+    background-color: #1E88E5;
+    color: white;
+    padding:1% 2%;
+    text-align: center;
+	    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    display: inline-block;
+    font-size: 120%;
+    cursor: pointer;
+	font-family: 'Quicksand', sans-serif;
+	position:absolute;
+	bottom:17%;
+	left:43%;
+	border-radius: 10px;
+}
+  #graph{
+  display:inline-block; 
+  background-color:rgba(255,255,255,0.7); 
+  box-radius:8px; 
+  width:48%; 
+  height:30%;
+  margin-top:1%;
+  vertical-align: top;
+  }
+  #footprint{
+  display:inline-block; 
+  background-color:rgba(255,255,255,0.7); 
+  box-radius:8px; 
+  width:48%; 
+  height:30%;
+  margin-top:1%;
+  margin-left:3%;
+  position:relative;
+  vertical-align: top;
+  }
+  #namebox{
+  width:60%;
+  height:7%;
+  margin:auto;
+  text-align:center;
+  }
+  #txt1{
+  display:inline-block; 
+  color:black; 
+font-family: 'Quicksand', sans-serif;
+  font-size:140%;
+  }
+  #contentsh1{
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.9);
+    padding: 20px;
+		position:relative;
+	top:6%;
+	left:7%;
+	width:85%;
+	height:auto;
+color:black;
+}
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+	margin:1% 0% 0% 50%;
+    cursor: pointer;
+}
+input[type=checkbox] {
+position:absolute;
+left:95%;
+}
+#work{ 
+ font-size:200%;
+     text-align: center;
+	    -webkit-transition-duration: 0.4s;
+		    cursor: pointer;
+}
+#work:hover
+{
+	background-color:rgba(255,255,255,0.5);
+}
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <h1 class="navbar-brand" style="font-family: 'Orbitron', sans-serif; font-size:160%;">Carbon.Footprint.Calculator</h1>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav navbar-right">
+	          <li><a href="#section1">Result</a></li>
+          <li><a href="#section2">Pledge</a></li>
+		  <li><a href="#section3">Calculate Again</a></li>
+       </ul>
+      </div>
+  </div>
+</nav> 
+      <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav navbar-right">
+	          <li><a href="#section1">Submit</a></li>
+          <li><a href="#section2">Pledge</a></li>
+		  <li><a href="#section3">Result</a></li>
+		  <li><a href="#section4">Thank you</a></li>
+		
+          
+		        </ul>
+      </div>
+  </div>
+</nav>    
+
+<div id="section1" class="container-fluid">
+<div id="namebox">
+<h1 style="display:inline-block;font-family: 'Quicksand', sans-serif;">Dear</h1>
+<h1 id="namech" style="display:inline-block; margin-left:2%; text-transform:uppercase; font-family: 'Quicksand', sans-serif;">jhg</h1>
+</div>
+<div style="width:100%; height:100%;">
+<h1 style="text-align:center; font-family: 'Quicksand', sans-serif; color:black;">Your Carbon Emission Graph</h1>
+<div id="graph">
+	<div id="piechart" style="width: 100%; height: 100%;"></div>
+</div>
+<div id="footprint">
+<div id="columnchart" style="width: 100%; height: 100%;"></div>
+</div>
+</div>
+<div style="background-color:white; position:relative; bottom:63%; padding:3%;">
+<p style="color:black; display:inline; text-align:center; font-family: 'Quicksand', sans-serif; font-size:150%; margin-left:12%; ">Your personal carbon footprint is </p><h6 style="color:black; display:inline;text-align:center; font-family: 'Quicksand', sans-serif; font-size:150%; margin:auto;" id="finalres">234</h6><p style="color:black; display:inline;text-align:center; font-family: 'Quicksand', sans-serif; font-size:150%; margin:auto;">kg of carbon dioxide equivalent per year!!!!</p>
+</div>
+<div id="work" style="border:2px solid white; border-radius:100%; width:4%; height:5%; position:relative; bottom:62%; left:49%;" >
+<a href="#section2"><span  class="glyphicon glyphicon-menu-down" style="margin:13% 20%; color:white;" ></span></a>
+</div>
+</div>
+
+<div id="section2" class="container-fluid">
+	 <div id="contentsh1">
+<form id="myForm" style="font-family: 'Quicksand', sans-serif; margin-top:-2%;" action="boot5.html#section3">
+<br/>
+Save electricity by only using as much as I need <input type="checkbox" required /> <br/>
+<br/>
+   Switch off the electrical appliances(fans,lights,computers,etc.) when not in use<input type="checkbox" value="11" required /><br/>
+   <br/>
+    Buying electrical appliances which are energy star rated<input type="checkbox" required /><br/>
+	<br/>
+    Switch from incandescnet bulbs to CFL lamps<input type="checkbox" required /><br/>
+	<br/>
+    Use public transport where possible<input type="checkbox" required /><br/>
+	<br/>
+    Carpool to work<input type="checkbox" required /><br/>
+	<br/>
+    Avoid business air travel, if feasible, and opt for Audio or Video Conferencing<input type="checkbox" required /><br/>
+	<br/>
+    Wasting less food<input type="checkbox" required /><br/>
+	<br/>
+    Practicing Reduce, Recycle and Reuse philosophy<input type="checkbox" required /><br/>
+	<br/>
+    Buying goods which are environment friendly<input type="checkbox" required /><br/>
+	<br/>
+				<input type="submit" />
+        </form>
+</div>
+<div id="work" style="border:2px solid white; border-radius:100%; width:4%; height:5%; position:relative; top:07%; left:49%;" >
+<a href="#section3"><span  class="glyphicon glyphicon-menu-down" style="margin:13% 20%; color:white;" ></span></a>
+</div>
+  </div>
+<div id="section3" class="container-fluid">
+ <div style="background-color:white; color:green; border:2px solid green; padding:4% 3%; margin:auto; font-size:180%; font-family: 'Quicksand', sans-serif; text-align:center; position:relative; top:20%;">
+<p>Thank You for taking the Carbon Pledge and committing to save Planet Earth!</p>
+</div>
+<a href="boot4.html"><button class="button1">CALCULATE AGAIN</button></a>
+</div>
+<!--<div id="section4" class="container-fluid">
+  <h1>Thank you</h1>
+</div>
+<div id="section5" class="container-fluid">
+  <h1>Section 4 Submenu 2</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+</div>
+-->
+<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+<script src="main2new.js"></script>
+</body>
+</html>
