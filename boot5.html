@@ -71,14 +71,12 @@ function drawChart1() {
   <style>
   body {
       position: relative; 
+	  	      overflow:hidden;
   }
   
-  #section1 {padding-top:6%;height:1000px;;color: #fff; background-color: red;}
-  #section2 {padding-top:50px;height:1000px;;color: #fff; background-color: #1E88E5;}
-  #section3 {padding-top:50px;height:1000px;color: #fff; background-color: #673ab7;}
-  #section4 {padding-top:50px;height:1000px;color: #fff; background-color: #ff9800;}
-  #section5 {padding-top:50px;height:1000px;color: #fff; background-color: #00bcd4;}
-  #section6 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
+  #section1 {padding-top:6%;height:1000px;;color: #fff; background-image:url("images/5.jpg");}
+  #section2 {padding-top:50px;height:1000px;;color: #fff; background-image:url("images/5.jpg");}
+  #section3 {padding-top:50px;height:1000px;color: #fff; background-image:url("images/5.jpg");}
     li{
   margin:5% 0% 3% 0%;
   font-family: 'Orbitron', sans-serif;
@@ -189,7 +187,6 @@ left:95%;
     <ul class="nav navbar-nav navbar-right">
 	          <li><a href="#section1">Result</a></li>
           <li><a href="#section2">Pledge</a></li>
-		  <li><a href="#section3">Calculate Again</a></li>
        </ul>
       </div>
   </div>
@@ -256,25 +253,13 @@ Save electricity by only using as much as I need <input type="checkbox" required
 				<input type="submit" />
         </form>
 </div>
-<div id="work" style="border:2px solid white; border-radius:100%; width:4%; height:5%; position:relative; top:07%; left:49%;" >
-<a href="#section3"><span  class="glyphicon glyphicon-menu-down" style="margin:13% 20%; color:white;" ></span></a>
-</div>
   </div>
 <div id="section3" class="container-fluid">
- <div style="background-color:white; color:green; border:2px solid green; padding:4% 3%; margin:auto; font-size:180%; font-family: 'Quicksand', sans-serif; text-align:center; position:relative; top:20%;">
+ <div style="background-color:white; color:brown; padding:4% 3%; margin:auto; font-size:180%; font-family: 'Orbitron', sans-serif; text-align:center; position:relative; top:20%;">
 <p>Thank You for taking the Carbon Pledge and committing to save Planet Earth!</p>
 </div>
-<a href="boot4.html"><button class="button1">CALCULATE AGAIN</button></a>
+<a href="boot4.html"><button class="button1" onclick="endclr()">CALCULATE AGAIN</button></a>
 </div>
-<!--<div id="section4" class="container-fluid">
-  <h1>Thank you</h1>
-</div>
-<div id="section5" class="container-fluid">
-  <h1>Section 4 Submenu 2</h1>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-</div>
--->
 <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
 <script src="main2new.js"></script>
 </body>

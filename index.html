@@ -11,13 +11,14 @@
   <style>
   body {
       position: relative; 
+    overflow:hidden;
   }
   
- #section1 {padding-top:50px;height:900px;;color: #fff; background-image:url("images/6.jpg");}
-  #section2 {padding-top:50px;height:900px;;color: #fff; background-color: #1E88E5;}
-  #section3 {padding-top:50px;height:450px;color: #fff; background-color: #673ab7;}
+ #section1 {padding-top:50px;height:900px;;color: #fff; background-image:url("images/5.jpg");}
+  #section2 {padding-top:50px;height:900px;;color: #fff; background-image:url("images/5.jpg");}
+  #section3 {padding-top:50px;height:450px;color: #fff; background-image:url("images/5.jpg");}
   li{
-  margin:5% 0% 3% 0%;
+  margin:7% 0% 3% 0%;
   font-family: 'Orbitron', sans-serif;
   } 
   .welcome{
@@ -340,9 +341,6 @@ margin-bottom:30%;
     <ul class="nav navbar-nav navbar-right">
 	          <li><a href="#section1">Homepage</a></li>
           <li><a href="#section2">Login</a></li>
-		  <li><a href="#section3">Calculations</a></li>
-          
-		  
        </ul>
       </div>
   </div>
@@ -358,8 +356,7 @@ margin-bottom:30%;
 <div id="section2" class="container-fluid">
 <h2 id="login">LOGIN</h2>
 <div id="contents">
-<form id="myform">
-
+<form id="myform" action="#section3">
 <input id="nameinput" name="Name" type="text" placeholder="enter your name here" required />
 <br/>
 <br/>
@@ -432,8 +429,8 @@ margin-bottom:30%;
 			<input type="submit" id="GOD" />
 			</form>
 			</div>
-<div id="didbak">
-<h3 id="did" onclick="fadeshow()">DID YOU KNOW???</h3>
+<div id="didbak"  onclick="fadeshow()">
+<h3 id="did">DID YOU KNOW???</h3>
 </div>
 <div id="know1">
 <h2 id="txt0">DID YOU KNOW-</h2><p id="txt1">The main greenhouse gases(GHG)in the Earth's atmosphere are water vapour, carbon dioxide, methane, nitrous oxide,and ozone.<br/>Though these gases are already present in our atmosphere, the problems begin when we distort and accelerate the natural process 
@@ -470,9 +467,9 @@ by releasing more GHG in the atmosphere than are necessary to maintain the plane
   <span class="dot" onclick="fadeshow2()"></span> 
   <span class="dot" onclick="fadeshow3()"></span> 
 </div>
-<div id="work" style="border:2px solid white; border-radius:100%; width:4%; height:5%; position:relative; top:21%; left:49%;" >
+<!--<div id="work" style="border:2px solid white; border-radius:100%; width:4%; height:5%; position:relative; top:21%; left:49%;" >
 <a href="#section3"><span  class="glyphicon glyphicon-menu-down" style="margin:13% 20%; color:white;" ></span></a>
-</div>
+</div>-->
 </div>
 <div id="section3" class="container-fluid">
 <h1 style="text-align:center;  font-family: 'Quicksand', sans-serif; margin-top:7%; margin-bottom:7%; font-size:350%;">Have you finished login? okayy...

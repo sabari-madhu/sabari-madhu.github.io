@@ -1,4 +1,4 @@
-	$("#know1").hide();
+$("#know1").hide();
 $("#know2").hide();
 $("#know3").hide();
 $("#txt0").hide();
@@ -153,4 +153,6 @@ localStorage.trav4=plsdei;
 localStorage.trav5=plsdei;
 localStorage.trav6=plsdei;
 localStorage.trav=plsdei;
+localStorage.home=0;
+localStorage.wastecal=0;
 }
