@@ -8,7 +8,7 @@ var trav11=trav1;
 var totall=(home11)+(wastecal11)+(trav11);
 $("#finalres").text(totall);
 var total11=parseInt(totall);
-function endclr()
+/*function endclr()
 {
 localStorage.amountfuel=0;
 localStorage.auto=0;
@@ -33,4 +33,4 @@ localStorage.trav6=0;
 localStorage.waste=0;	
 localStorage.wastecal=0;		
 localStorage.watt=0;
-}	
+}	*/

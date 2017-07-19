@@ -23,70 +23,173 @@ $("#air").click(ainto);
 $("#waste").click(winto);
 $("#lpg").click(linto);
 $("#cng").click(cinto);
- /*$('#myFormh').on('submit', function(e) {
-        e.preventDefault();
-        $.ajax({
-            url : '',
-            type: "POST",
-            data: $('#myFormh').serialize(),
-            /*success: function (data) {
-                saveSettings();
-				loadSettings();
-            },
-           /* error: function (jXHR, textStatus, errorThrown) {
-                alert(errorThrown);
-            }
-        });
-    });*/
-   $("#GOD").click(saveSettings);
 	loadSettings();
-    $("#GOD1").click(saveSettings1);
-	loadSettings1();
-	   $("#GOD2").click(saveSettings2);
+   $("#GOD").click(function(){
+	  var a=parseInt($('#people').val());
+var b=parseInt($('#watt').val());
+var c=parseInt($("#fuel-type").val());
+var d=parseInt($("#amount-fuel").val());
+if(a>999 || b>999 || c>999 || d>999 || a<0 || b<0 || c<0 || d<0 )
+	   {
+				alert("Invalid entry!!...enter values between 0 and 999");
+		return false;   
+	   }
+	   else
+	   {
+		   saveSettings();
+	   }
+   });
+				loadSettings1();
+    $("#GOD1").click(function(){
+			 var y=parseInt($('#waste1').val());
+	if(y>999 || y<0)
+	{
+		alert("Invalid entry!!...enter values between 0 and 999");
+		return false;
+	}
+	else{
+		saveSettings1();
+	}
+	});
+
+	   $("#GOD2").click(function()
+	   {var f=parseInt($('#smalpetrol').val());
+var g=parseInt($('#smaldiesel').val());
+var h=parseInt($('#smalcng').val());
+		   if(f>999 || g>999 || h>999 || f<0 || g<0 || h<0)
+		   {
+			   		alert("Invalid entry!!...enter values between 0 and 999");
+		return false;
+		   }
+		   else{
+			   saveSettings2();
+			   return false;
+		   }
+	   });
 	   $("#smalpetrltag").text(localStorage.smalpet);
 $("#smaldieseltag").text(localStorage.smaldie);
 $("#smalcngtag").text(localStorage.smalcng);
 		//loadSettings2();
-			    $("#GOD11").click(saveSettings11);
+			    $("#GOD11").click(function()
+				{
+					var m1=parseInt($('#medpetrol').val());
+var m2=parseInt($('#meddiesel').val());
+var m3=parseInt($('#medcng').val());
+if(m1>999 || m2>999 || m3>999 || m1<0 || m2<0 || m3<0)
+					{
+		alert("Invalid entry!!...enter values between 0 and 999");
+		return false;	
+					}
+					else
+					{
+						saveSettings11();
+						return false;
+					}
+				});
 				$("#medpetrltag").text(localStorage.medpet);
 $("#meddieseltag").text(localStorage.meddie);
 $("#medcngtag").text(localStorage.medcng);
 					//loadSettings11();
-					    $("#GOD12").click(saveSettings12);
+					    $("#GOD12").click(function()
+						{
+							var l1=parseInt($('#largepetrol').val());
+var l2=parseInt($('#largediesel').val());
+var l3=parseInt($('#largecng').val());
+							if(l1>999 || l2>999 || l3>999 || l1<0 || l2<0 || l3<0)
+							{
+									alert("Invalid entry!!...enter values between 0 and 999");
+		                            return false;		
+							}
+							else
+							{
+								saveSettings12();
+								return false;
+							}
+						});
 						$("#largepetrltag").text(localStorage.largepet);
 $("#largedieseltag").text(localStorage.largedie);
 $("#largecngtag").text(localStorage.largecng);	
 						//	loadSettings12();
-	    $("#GOD13").click(saveSettings13);
+	    $("#GOD13").click(function()
+		{
+			var w1=parseInt($('#twowheel').val());
+		if(w1<0 || w1>999)
+		{
+									alert("Invalid entry!!...enter values between 0 and 999");
+		                            return false;
+		}
+else{
+		saveSettings13();
+		return false;
+}
+		});
 		 $("#2wheeltag").text(localStorage.twowheel);
 			//loadSettings13();
-	    $("#GOD3").click(saveSettings3);
+	    $("#GOD3").click(function()
+		{
+			var au=parseInt($('#auto').val());
+var bu=parseInt($('#bus').val());
+var tx=parseInt($('#taxi').val());
+			if(au>999 || bu>999 || tx>999 || au<0 || bu<0 || tx<0)
+			{
+													alert("Invalid entry!!...enter values between 0 and 999");
+		                            return false;
+			}
+			else{
+				saveSettings3();
+				return false;
+			}
+		});
 			$("#autotag").text(localStorage.auto);
 $("#taxitag").text(localStorage.taxi);
 $("#bustag").text(localStorage.bus);
 //	loadSettings3();		
-	$("#GOD4").click(saveSettings4);
+	$("#GOD4").click(function()
+	{
+		var domm=parseInt($('#domestic').val());
+var intt=parseInt($('#international').val());
+		if(domm<0 || domm>999 || intt<0 || intt>999)
+		{
+									alert("Invalid entry!!...enter values between 0 and 999");
+		                            return false;
+		}
+		else{
+			saveSettings4();
+			return false;
+		}
+	});
 			$("#domtag").text(localStorage.domair);
 $("#inttag").text(localStorage.intair);
 	//	loadSettings4();
-	    $("#GOD5").click(saveSettings5);
+	    $("#GOD5").click(function()
+		{
+			var tr=parseInt($('#train').val());
+			if(tr>999 || tr<0)
+			{
+				alert("Invalid entry!!...enter values between 0 and 999");
+	            return false;
+			}
+			else{
+				saveSettings5();
+				return false;
+			}
+		});
 		 $("#traintag").text(localStorage.train);
 		//	loadSettings5();
 $('#fuel-type').change(godpls);
 $('#final').submit(function()
 {
 	localStorage.trav=parseInt((localStorage.trav0))+parseInt((localStorage.trav1))+parseInt((localStorage.trav2))+parseInt((localStorage.trav3))+parseInt((localStorage.trav4))+parseInt((localStorage.trav5))+parseInt((localStorage.trav6));
-	if(parseInt(localStorage.trav)==0){
+	if((parseInt(localStorage.trav)==0)||(isNaN(localStorage.trav))){
 
 	alert("Travel calculation not complete");
 			return false;}
-	else if(parseInt(localStorage.home)==0)
+	else if((parseInt(localStorage.home)==0)||(isNaN(localStorage.home)))
 	{
-	
 		alert("home energy calculation not complete");
 			return false;
 	}
-	else if(parseInt(localStorage.wastecal)==0)
+	else if((parseInt(localStorage.wastecal)==0)||(isNaN(localStorage.wastecal)))
 	{ 
 		alert("Waste calculation not complete");
 		return false;
