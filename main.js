@@ -42,7 +42,7 @@ if(a>999 || b>999 || c>999 || d>999 || a<0 || b<0 || c<0 || d<0 )
 				loadSettings1();
     $("#GOD1").click(function(){
 			 var y=parseInt($('#waste1').val());
-	if(y>999 || y<0)
+	if(y>9999 || y<0)
 	{
 		alert("Invalid entry!!...enter values between 0 and 999");
 		return false;
@@ -56,7 +56,7 @@ if(a>999 || b>999 || c>999 || d>999 || a<0 || b<0 || c<0 || d<0 )
 	   {var f=parseInt($('#smalpetrol').val());
 var g=parseInt($('#smaldiesel').val());
 var h=parseInt($('#smalcng').val());
-		   if(f>999 || g>999 || h>999 || f<0 || g<0 || h<0)
+		   if(f>9999 || g>9999 || h>9999 || f<0 || g<0 || h<0)
 		   {
 			   		alert("Invalid entry!!...enter values between 0 and 999");
 		return false;
@@ -75,7 +75,7 @@ $("#smalcngtag").text(localStorage.smalcng);
 					var m1=parseInt($('#medpetrol').val());
 var m2=parseInt($('#meddiesel').val());
 var m3=parseInt($('#medcng').val());
-if(m1>999 || m2>999 || m3>999 || m1<0 || m2<0 || m3<0)
+if(m1>9999 || m2>9999 || m3>9999 || m1<0 || m2<0 || m3<0)
 					{
 		alert("Invalid entry!!...enter values between 0 and 999");
 		return false;	
@@ -95,7 +95,7 @@ $("#medcngtag").text(localStorage.medcng);
 							var l1=parseInt($('#largepetrol').val());
 var l2=parseInt($('#largediesel').val());
 var l3=parseInt($('#largecng').val());
-							if(l1>999 || l2>999 || l3>999 || l1<0 || l2<0 || l3<0)
+							if(l1>9999 || l2>9999 || l3>9999 || l1<0 || l2<0 || l3<0)
 							{
 									alert("Invalid entry!!...enter values between 0 and 999");
 		                            return false;		
@@ -113,7 +113,7 @@ $("#largecngtag").text(localStorage.largecng);
 	    $("#GOD13").click(function()
 		{
 			var w1=parseInt($('#twowheel').val());
-		if(w1<0 || w1>999)
+		if(w1<0 || w1>9999)
 		{
 									alert("Invalid entry!!...enter values between 0 and 999");
 		                            return false;
@@ -130,7 +130,7 @@ else{
 			var au=parseInt($('#auto').val());
 var bu=parseInt($('#bus').val());
 var tx=parseInt($('#taxi').val());
-			if(au>999 || bu>999 || tx>999 || au<0 || bu<0 || tx<0)
+			if(au>9999 || bu>9999 || tx>9999 || au<0 || bu<0 || tx<0)
 			{
 													alert("Invalid entry!!...enter values between 0 and 999");
 		                            return false;
@@ -148,7 +148,7 @@ $("#bustag").text(localStorage.bus);
 	{
 		var domm=parseInt($('#domestic').val());
 var intt=parseInt($('#international').val());
-		if(domm<0 || domm>999 || intt<0 || intt>999)
+		if(domm<0 || domm>9999 || intt<0 || intt>9999)
 		{
 									alert("Invalid entry!!...enter values between 0 and 999");
 		                            return false;
@@ -164,7 +164,7 @@ $("#inttag").text(localStorage.intair);
 	    $("#GOD5").click(function()
 		{
 			var tr=parseInt($('#train').val());
-			if(tr>999 || tr<0)
+			if(tr>9999 || tr<0)
 			{
 				alert("Invalid entry!!...enter values between 0 and 999");
 	            return false;
