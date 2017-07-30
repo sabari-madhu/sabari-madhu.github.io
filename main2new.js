@@ -34,3 +34,7 @@ localStorage.waste=0;
 localStorage.wastecal=0;		
 localStorage.watt=0;
 }	*/
+$("#selectall").click(function(){
+		$("input[type=checkbox]").attr("checked", "checked");
+		return false;
+});
