@@ -153,6 +153,29 @@ input[type=submit] {
     border-radius: 4px;
 	margin:1% 0% 0% 50%;
     cursor: pointer;
+		    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+input[type=submit]:hover{
+    background-color: #4CAFa0;
+		box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#selectall
+{
+background-color:#4CAFa0;
+ padding:0.2% 0.5%;
+ font-size:8px; 
+ border-radius:8px; 
+ position:relative; 
+ left:95%; 
+ -webkit-transition-duration: 0.4s; 
+ transition-duration: 0.4s;
+ }
+#selectall:hover
+{
+background-color:white;
+		box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24),0 7px 20px 0 rgba(0,0,0,0.19);
+		font-size:12px;
 }
 input[type=checkbox] {
 position:absolute;
@@ -249,7 +272,9 @@ Save electricity by only using as much as I need <input type="checkbox" required
     Practicing Reduce, Recycle and Reuse philosophy<input type="checkbox" required /><br/>
 	<br/>
     Buying goods which are environment friendly<input type="checkbox" required /><br/>
+		<button id="selectall" >select</br> all</button>
 	<br/>
+	
 				<input type="submit" />
         </form>
 </div>
