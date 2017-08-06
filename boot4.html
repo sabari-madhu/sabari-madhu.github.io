@@ -11,7 +11,7 @@
   <style>
   body {
       position: relative; 
-	      overflow:hidden;
+	     overflow:hidden;
   }
   
   #section1 {padding-top:50px;height:900px;;color: #fff; background-image:url("images/5.jpg");}
@@ -62,7 +62,7 @@ text-align:center;
 }
 .whitebak{
 position:relative;
-top:13%;
+top:11%;
 width:18%;
 height:5%;
 margin:auto;
@@ -610,7 +610,8 @@ left:90%;
 			<br/>
 			Which type of gas is used in your household per month?
 			<br/>
-    <select name="search_option" style="width:70%;" id="fuel-type" required>
+    <select name="search_option" style="width:70%;" id="fuel-type" placeholder="enter fuel type" required>
+	<option value="" disabled selected>Select your option</option>
 <option value="1.8895296">CNG</option>
 <option value="2.9910628">LPG</option>
 <option value="1.8895296">PNG</option>
@@ -644,13 +645,13 @@ left:90%;
  <option value="3" >large (SUV)</option>
  </select>-->
  <br/>
-            <input type="number" id="smalpetrol" name="smalpetrol" required style="width:70%;" placeholder="distance travelled in petrol car" /> By small petrol car=<h1 style="font-size:90%; display:inline; padding:1%; background-color:black; color:white; margin-left:-0%;" id="smalpetrltag"></h1>
+            <input type="number" id="smalpetrol" name="smalpetrol" required style="width:70%;" placeholder="distance travelled by petrol car in Km" /> By small petrol car=<h1 style="font-size:130%; font-weight:900; display:inline; padding:1%; color:black; margin-left:-0%;" id="smalpetrltag"></h1>Km
 			<br/>
 			<br/>
-		    <input type="number" id="smaldiesel" name="smaldiesel" required style="width:70%;" placeholder="distance travelled in diesel car" /> By small diesel car=<h1 style="font-size:90%; display:inline; padding:1%; background-color:black; color:white; margin-left:-0%;" id="smaldieseltag"></h1>
+		    <input type="number" id="smaldiesel" name="smaldiesel" required style="width:70%;" placeholder="distance travelled by diesel car in Km" /> By small diesel car=<h1 style="font-size:130%; font-weight:900; display:inline; padding:1%; color:black; margin-left:-0%;" id="smaldieseltag"></h1>Km
 			<br/>
 			<br/>
-			<input type="number" id="smalcng" name="smalcng" required style="width:70%;" placeholder="distance travelled in cng car" /> By small cng car=<h1 style="font-size:90%; display:inline; padding:1%; background-color:black; color:white; margin-left:-0%;" id="smalcngtag"></h1>
+			<input type="number" id="smalcng" name="smalcng" required style="width:70%;" placeholder="distance travelled by cng car in Km" /> By small cng car=<h1 style="font-size:130%; font-weight:900; display:inline; padding:1%; color:black; margin-left:-0%;" id="smalcngtag"></h1>Km
 			<br/>
 			<br/>
             <!-- Which type of fuel is used in your car?
@@ -679,13 +680,13 @@ left:90%;
 		ENTER THE DISTANCE TRAVELLED FOR EACH FUEL TYPE
 		<br/>
  <br/>
-            <input type="number" id="medpetrol" name="medpetrol" required style="width:70%;" placeholder="distance travelled in petrol car" /> By medium petrol car=<h1 style="font-size:90%; display:inline; padding:1%; background-color:black; color:white; margin-left:-0%;" id="medpetrltag"></h1>
+            <input type="number" id="medpetrol" name="medpetrol" required style="width:60%;" placeholder="distance travelled by petrol car in Km" /> By medium petrol car=<h1 style="font-size:130%; font-weight:900; display:inline; padding:1%; color:black; margin-left:-0%;" id="medpetrltag"></h1>Km
 			<br/>
 			<br/>
-		    <input type="number" id="meddiesel" name="meddiesel" required style="width:70%;" placeholder="distance travelled in diesel car" /> By medium diesel car=<h1 style="font-size:90%; display:inline; padding:1%; background-color:black; color:white; margin-left:-0%;" id="meddieseltag"></h1>
+		    <input type="number" id="meddiesel" name="meddiesel" required style="width:60%;" placeholder="distance travelled by diesel car in Km" /> By medium diesel car=<h1 style="font-size:130%; font-weight:900; display:inline; padding:1%; color:black; margin-left:-0%;" id="meddieseltag"></h1>Km
 			<br/>
 			<br/>
-			<input type="number" id="medcng" name="medcng" required style="width:70%;" placeholder="distance travelled in cng car" /> By medium cng car=<h1 style="font-size:90%; display:inline; padding:1%; background-color:black; color:white; margin-left:-0%;" id="medcngtag"></h1>
+			<input type="number" id="medcng" name="medcng" required style="width:60%;" placeholder="distance travelled by cng car in Km" /> By medium cng car=<h1 style="font-size:130%; font-weight:900; display:inline; padding:1%; color:black; margin-left:-0%;" id="medcngtag"></h1>Km
 			<br/>
 			<br/>
            
@@ -706,13 +707,13 @@ left:90%;
 		ENTER THE DISTANCE TRAVELLED FOR EACH FUEL TYPE
 		<br/>
  <br/>
-            <input type="number" id="largepetrol" name="largepetrol" required style="width:70%;" placeholder="distance travelled in petrol car" /> By large petrol car=<h1 style="font-size:90%; display:inline; padding:1%; background-color:black; color:white; margin-left:-0%;" id="largepetrltag"></h1>
+            <input type="number" id="largepetrol" name="largepetrol" required style="width:70%;" placeholder="distance travelled by petrol car in Km" /> By large petrol car=<h1 style="font-size:130%; font-weight:900; display:inline; padding:1%;  color:black; margin-left:-0%;" id="largepetrltag"></h1>Km
 			<br/>
 			<br/>
-		    <input type="number" id="largediesel" name="largediesel" required style="width:70%;" placeholder="distance travelled in diesel car" /> By large diesel car=<h1 style="font-size:90%; display:inline; padding:1%; background-color:black; color:white; margin-left:-0%;" id="largedieseltag"></h1>
+		    <input type="number" id="largediesel" name="largediesel" required style="width:70%;" placeholder="distance travelled by diesel car in Km" /> By large diesel car=<h1 style="font-size:130%; font-weight:900; display:inline; padding:1%; color:black; margin-left:-0%;" id="largedieseltag"></h1>Km
 			<br/>
 			<br/>
-			<input type="number" id="largecng" name="largecng" required style="width:70%;" placeholder="distance travelled in cng car" /> By large cng car=<h1 style="font-size:90%; display:inline; padding:1%; background-color:black; color:white; margin-left:-0%;" id="largecngtag"></h1>
+			<input type="number" id="largecng" name="largecng" required style="width:70%;" placeholder="distance travelled by cng car in Km" /> By large cng car=<h1 style="font-size:130%; font-weight:900; display:inline; padding:1%; color:black; margin-left:-0%;" id="largecngtag"></h1>Km
 			<br/>
 			<br/>
 			<input type="submit" id="GOD12" />
@@ -733,7 +734,7 @@ left:90%;
             How much distance do you travel by 2-wheeler in Km?
 			<br/>
 			<br/>
-            <input type="number" id="twowheel" name="twowheel" required style="width:70%;" placeholder="enter value in Km" /> By Two-Wheeler=<h1 style="font-size:90%; display:inline; padding:1%; background-color:black; color:white; margin-left:-0%;" id="2wheeltag"></h1>
+            <input type="number" id="twowheel" name="twowheel" required style="width:70%;" placeholder="enter value in Km" /> By Two-Wheeler=<h1 style="font-size:130%; font-weight:900; display:inline; padding:1%; color:black; margin-left:-0%;" id="2wheeltag"></h1>Km
 			<br/>
 			<br/>
 			<input type="submit" id="GOD13" />
@@ -752,18 +753,18 @@ left:90%;
 				<h1 style="text-align:center; font-size:150%; ">PUBLIC TRANSPORT</h1>
            How much distance do you travel by auto?
 			<br/>
-            <input type="number" id="auto" required style="width:70%;" placeholder="enter value in Km" /> By auto=<h1 style="font-size:90%; display:inline; padding:1%; background-color:black; color:white; margin-left:-0%;" id="autotag"></h1>
+            <input type="number" id="auto" required style="width:70%;" placeholder="enter value in Km" /> By auto=<h1 style="font-size:130%; font-weight:900; display:inline; padding:1%; color:black; margin-left:-0%;" id="autotag"></h1>Km
 			<br/>
 <br/>
 <br/>
            How much distance do you travel by taxi?
 			<br/>
-            <input type="number" id="taxi" required style="width:70%;" placeholder="enter value in Km" /> By Taxi=<h1 style="font-size:90%; display:inline; padding:1%; background-color:black; color:white; margin-left:-0%;" id="taxitag"></h1>
+            <input type="number" id="taxi" required style="width:70%;" placeholder="enter value in Km" /> By Taxi=<h1 style="font-size:130%; font-weight:900; display:inline; padding:1%; color:black; margin-left:-0%;" id="taxitag"></h1>Km
 			<br/>
 <br/>
            How much distance do you travel by bus?
 			<br/>
-            <input type="number" id="bus" name="bus" required style="width:70%;" placeholder="enter value in Km" /> By bus=<h1 style="font-size:90%; display:inline; padding:1%; background-color:black; color:white; margin-left:-0%;" id="bustag"></h1>
+            <input type="number" id="bus" name="bus" required style="width:70%;" placeholder="enter value in Km" /> By bus=<h1 style="font-size:130%; font-weight:900; display:inline; padding:1%; color:black; margin-left:-0%;" id="bustag"></h1>Km
 			<br/>
 			<input type="submit" id="GOD3" />
 
@@ -784,13 +785,13 @@ left:90%;
            How much distance do you travel in a month by air in domestic sectors,on an average?
 			<br/>
 <br/>
-            <input type="number" id="domestic" name="domestic" required style="width:70%;" placeholder="enter value in Km" /> By Domestic-Flight=<h1 style="font-size:90%; display:inline; padding:1%; background-color:black; color:white; margin-left:-0%;" id="domtag"></h1>
+            <input type="number" id="domestic" name="domestic" required style="width:70%;" placeholder="enter value in Km" /> By Domestic-Flight=<h1 style="font-size:130%; font-weight:900; display:inline; padding:1%; color:black; margin-left:-0%;" id="domtag"></h1>Km
 			<br/>
 <br/>
            How much distance do you travel in a month by air in international sectors,on an average?
 			<br/>
 <br/>
-            <input type="number" id="international" name="international" required style="width:70%;" placeholder="enter value in Km" /> By International-Flight=<h1 style="font-size:90%; display:inline;  padding:1%; background-color:black; color:white; margin-left:-0%;" id="inttag"></h1>
+            <input type="number" id="international" name="international" required style="width:65%;" placeholder="enter value in Km" /> By International-Flight=<h1 style="font-size:130%; font-weight:900; display:inline;  padding:1%; color:black; margin-left:-0%;" id="inttag"></h1>Km
 			<br/>
 			<input type="submit" id="GOD4" />
 
@@ -814,7 +815,7 @@ left:90%;
 			<br/>
 <br/>
 <br/>
-            <input type="number" id="train" name="train" required style="width:70%;" placeholder="enter value in Km" maxlength = "3" /> By Train=<h1 style="font-size:90%; display:inline; padding:1%; background-color:black; color:white; margin-left:-0%;" id="traintag"></h1>
+            <input type="number" id="train" name="train" required style="width:70%;" placeholder="enter value in Km" maxlength = "3" /> By Train=<h1 style="font-size:130%; font-weight:900; display:inline; padding:1%; color:black; margin-left:-0%;" id="traintag"></h1>Km
 			<br/>
 			<br/>
 			<input type="submit" id="GOD5" />
@@ -872,7 +873,7 @@ left:90%;
   THEN LETS PROCEED</h1>
     <div style="background-color:rgba(0,0,0,0.9); padding-top:1%; padding-bottom:2%; padding-left:1%; color:white; font-size:180%; margin:auto;">
   <form style="font-family: 'Quicksand', sans-serif;" action="boot5.html#section1" id="final">
-  I agree that the given informations are reasonably accurate to get the correct result <input type="checkbox" required /><br/>
+  I agree that the given informations are reasonably accurate to get the correct result <input type="checkbox" required style="width:2%; height:2%; bottom:4.2%;" /><br/>
 <input type="submit"  style="position:absolute; bottom:1.5%; left:46%; height:1%; font-size:80%;">
   </form>
   </div>
