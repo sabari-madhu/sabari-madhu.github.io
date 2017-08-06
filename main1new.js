@@ -9,6 +9,8 @@ $("#oval1").hide();
 $("#oval2").hide();
 $("#oval3").hide();
 $("#whitebak").hide();
+
+
 function fadeshow()
 {
 	if($('#know1').is(':visible') )
@@ -58,9 +60,26 @@ $("#oval2").css("box-shadow", "5px 0px");
 $("#oval3").css("box-shadow", "5px 0px");
 }
 }
-$("#didbak").click(function () 
+/*$("#didbak").click(function () 
 {
  $(this).toggleClass("green");
+});*/
+$('#section2').click(function(e) 
+{ 
+if(($('#know1').is(':visible')) || ($('#know2').is(':visible') ) || ($('#know3').is(':visible') ) )
+{
+if( (!$(e.target).is('#know1')) &&  (!$(e.target).is('#know2')) &&  (!$(e.target).is('#know3')) && (!$(e.target).is('#didbak')) && (!$(e.target).hasClass('dot')) )
+{
+	$("#know1").hide();
+	$("#txt0").hide();
+$("#txt1").hide();
+   $("#txt2").hide();
+$("#txt3").hide();
+$("#know2").hide();
+$("#know3").hide(); 
+$("#whitebak").hide();
+}
+}
 });
 function fadeshow1()
 {
